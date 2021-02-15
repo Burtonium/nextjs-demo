@@ -12,7 +12,7 @@ export const getServerSideProps = async () => {
 
 const Home = (props) => {
   const initialData = props.markets;
-  const { markets, isLoading, isError } = fetchMarkets({ initialData });
+  const { markets, isError } = fetchMarkets({ initialData });
   const baseCurrencies = uniq(markets.map(({ baseAsset }) => baseAsset));
   const [selected, setSelected] = useState(baseCurrencies[0]);
   const quoteMarkets = markets.filter(({ baseAsset }) => baseAsset === selected);
