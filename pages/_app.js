@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container pl-2 pr-2">
-        <h1 className="title">
+        <h1 className="title" data-cy="brand-title">
           <span className="has-text-primary">Currency Converter</span>
           &nbsp;
           <span className="has-text-secondary">PRO</span>

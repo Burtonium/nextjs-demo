@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "bulma": "^0.9.2",
@@ -15,5 +16,9 @@
     "react-dom": "17.0.1",
     "sass": "^1.32.7",
     "swr": "^0.4.2"
+  },
+  "devDependencies": {
+    "cypress": "^6.4.0",
+    "cypress-dotenv": "^1.2.2"
   }
 }

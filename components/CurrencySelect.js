@@ -1,9 +1,17 @@
 
-const CurrencySelect = ({currencies, selected, onChange } = { currencies: [] }) => (
+const CurrencySelect = ({currencies, selected, onChange }) => (
   <div className="select">
-    <select value={selected} onChange={onChange}>
+    <select
+      data-cy="currency-select"
+      value={selected}
+      onChange={onChange}>
       {currencies.map((currency) => 
-        <option value={currency} key={currency}>{currency}</option>
+        <option
+          data-cy="currency-option"
+          value={currency}
+          key={currency}>
+          {currency}
+        </option>
       )}
     </select>
   </div>

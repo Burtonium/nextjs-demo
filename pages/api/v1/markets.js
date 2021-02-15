@@ -1,4 +1,4 @@
-const markets = (randomPrice) => [{
+export const markets = (randomPrice) => [{
   symbol: 'BTCUSD',
   baseAsset: 'BTC',
   quoteAsset: 'USD',

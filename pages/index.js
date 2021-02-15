@@ -25,10 +25,15 @@ const Home = (props) => {
           currencies={baseCurrencies}
           selected={selected}
           onChange={(evt) => setSelected(evt.target.value)}/>
-        <div>
+        <div className="conversion-results">
           {quoteMarkets.map(({ quoteAsset, price, symbol }) => (
-            <p key={symbol}>
-              1 {selected} is <b className="gradient-underline">{price} {quoteAsset}</b>
+            <p className="conversion-result" key={symbol}>
+              1 <span className="base-asset">{selected}</span> is&nbsp;
+              <b className="gradient-underline">
+                <span className="quote-price">{price}</span>
+                &nbsp;
+                <span className="quote-asset">{quoteAsset}</span>
+              </b>
             </p>
           ))}
         </div>
