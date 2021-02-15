@@ -1,9 +1,8 @@
-import 'components/CurrencySelect';
 import { useState } from 'react';
 import { uniq } from 'lodash';
-import CurrencySelect from 'components/CurrencySelect';
 import { fetchMarkets } from 'api/client';
 import { getMarkets } from 'api/server';
+import CurrencySelect from 'components/CurrencySelect';
 
 export const getServerSideProps = async () => {
   const { markets } = await getMarkets();
